@@ -39,6 +39,12 @@ def main() -> int:
                 continue
             if json_path.endswith(".image") and value.startswith("http://"):
                 errors.append(f"{file_path.name}:{json_path}: insecure image URL: {value}")
+            if (
+                file_path.name == "market-v2.json"
+                and json_path.endswith(".image")
+                and "mcsmanager.oss-cn-guangzhou.aliyuncs.com" in value
+            ):
+                errors.append(f"{file_path.name}:{json_path}: inaccessible image host: {value}")
             if "githubyumao/" in value:
                 warnings.append(f"{file_path.name}:{json_path}: upstream runtime image: {value}")
 

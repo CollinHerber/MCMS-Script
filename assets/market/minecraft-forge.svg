@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="215" viewBox="0 0 460 215" role="img" aria-labelledby="title desc">
+  <title id="title">Minecraft Forge server</title>
+  <desc id="desc">An orange forge-themed card for modded Minecraft server templates.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f2937"/>
+      <stop offset="1" stop-color="#7c2d12"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#fbbf24" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#ea580c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="460" height="215" fill="url(#bg)"/>
+  <circle cx="366" cy="108" r="105" fill="url(#glow)"/>
+  <path d="M330 45h70l20 35-20 35h-70l-20-35z" fill="none" stroke="#fed7aa" stroke-width="9"/>
+  <circle cx="365" cy="80" r="17" fill="#fed7aa"/>
+  <rect x="28" y="38" width="282" height="116" rx="8" fill="#111827" opacity=".78"/>
+  <text x="52" y="87" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="700">MINECRAFT</text>
+  <text x="52" y="124" fill="#fb923c" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="800">FORGE</text>
+  <text x="52" y="145" fill="#ffedd5" font-family="Arial,Helvetica,sans-serif" font-size="12" letter-spacing="2">MODDED SERVER</text>
+</svg>
