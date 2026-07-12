@@ -300,9 +300,6 @@
                     "changeWorkdir": false,
                     "workingDir": "/opt/enshrouded",
                     "env": [
-                        "SERVER_NAME=Enshrouded Server",
-                        "SERVER_SLOT_COUNT=16",
-                        "SERVER_QUERYPORT=15637",
                         "PUID=4711",
                         "PGID=4711",
                         "UPDATE_CRON=*/30 * * * *"
