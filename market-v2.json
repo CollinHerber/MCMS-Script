@@ -331,24 +331,24 @@
         {
             "title": "Windrose Dedicated Server",
             "language": "en_us",
-            "platform": "Linux",
-            "description": "Windrose dedicated server with optional Windrose+ support that can be enabled or disabled later from the terminal page.",
+            "platform": "Windows",
+            "description": "Native Windows Windrose dedicated server installed through SteamCMD. Requires a Windows MCSManager daemon.",
             "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3041230/7e838d87d787735d5d29d72777c5ee55653dfb2b/header.jpg",
             "gameType": "Windrose",
             "category": "Latest Version",
-            "runtime": "Linux",
+            "runtime": "Windows",
             "hardware": "2 CPU cores @ 3.2 GHz, RAM 8G+ (16G recommended for 10 players), SSD 35G+",
             "size": "35GB+",
             "targetLink": "",
-            "author": "Indifferent Broccoli",
+            "author": "MCSManager / Windrose",
             "tags": [
-                "Docker version",
-                "Optional Windrose+"
+                "Native Windows",
+                "SteamCMD"
             ],
             "setupInfo": {
-                "startCommand": "",
+                "startCommand": "StartServerForeground.bat",
                 "stopCommand": "^C",
-                "updateCommand": "",
+                "updateCommand": "\"{mcsm_steamcmd}\" +force_install_dir \"{mcsm_workspace}\" +login anonymous +app_update 4129620 validate +quit",
                 "ie": "utf8",
                 "oe": "utf8",
                 "type": "steam/windrose",
@@ -356,40 +356,8 @@
                     "Windrose"
                 ],
                 "fileCode": "utf8",
-                "processType": "docker",
-                "runAs": "",
-                "docker": {
-                    "image": "indifferentbroccoli/windrose-server-docker:latest",
-                    "ports": [
-                        "{mcsm_port1}:7777/tcp",
-                        "{mcsm_port1}:7777/udp",
-                        "{mcsm_port2}:8780/tcp"
-                    ],
-                    "changeWorkdir": false,
-                    "workingDir": "/home/steam/server-files",
-                    "env": [
-                        "PUID=1000",
-                        "PGID=1000",
-                        "UPDATE_ON_START=true",
-                        "INVITE_CODE=changeme",
-                        "USE_DIRECT_CONNECTION=false",
-                        "SERVER_PORT=7777",
-                        "USER_SELECTED_REGION=",
-                        "SERVER_NAME=Windrose Server",
-                        "SERVER_PASSWORD=",
-                        "MAX_PLAYERS=10",
-                        "P2P_PROXY_ADDRESS=127.0.0.1",
-                        "GENERATE_SETTINGS=true",
-                        "RUN_WORLD_DESCRIPTION_UPDATER=false",
-                        "WINE_VERBOSE=false",
-                        "UE4SS_ENABLED=false",
-                        "WINDROSE_PLUS_ENABLED=false",
-                        "WINDROSE_PLUS_VERSION=",
-                        "WINDROSE_PLUS_DASHBOARD_PORT=8780",
-                        "WINDROSE_PLUS_RCON_PASSWORD="
-                    ],
-                    "extraVolumes": []
-                }
+                "processType": "general",
+                "runAs": ""
             }
         },
         {
