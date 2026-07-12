@@ -346,7 +346,7 @@
                 "SteamCMD"
             ],
             "setupInfo": {
-                "startCommand": "StartServerForeground.bat",
+                "startCommand": "R5\\Binaries\\Win64\\WindroseServer-Win64-Shipping.exe -log",
                 "stopCommand": "^C",
                 "updateCommand": "\"{mcsm_steamcmd}\" +force_install_dir \"{mcsm_workspace}\" +login anonymous +app_update 4129620 validate +quit",
                 "ie": "utf8",
@@ -357,7 +357,10 @@
                 ],
                 "fileCode": "utf8",
                 "processType": "general",
-                "runAs": ""
+                "runAs": "",
+                "terminalOption": {
+                    "pty": false
+                }
             }
         },
         {
