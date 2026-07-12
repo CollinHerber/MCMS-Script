@@ -357,7 +357,7 @@
                 ],
                 "fileCode": "utf8",
                 "processType": "docker",
-                "runAs": "steam",
+                "runAs": "",
                 "docker": {
                     "image": "indifferentbroccoli/windrose-server-docker:latest",
                     "ports": [
