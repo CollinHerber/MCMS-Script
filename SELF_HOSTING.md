@@ -4,13 +4,13 @@ The active MCSManager deployment mounts this repository read-only into the web c
 
 ```text
 D:\MCS\Source\MCMS-Script
-  -> /opt/mcsmanager/web/public/self-hosted-market
+  -> /opt/mcsmanager/web/public/upload_files/self-hosted-market
 ```
 
 The panel marketplace source is:
 
 ```text
-public/self-hosted-market/market-v2.json
+public/upload_files/self-hosted-market/market-v2.json
 ```
 
 This avoids `script.mcsmanager.com` for marketplace metadata and makes changes to this fork available without rebuilding the MCSManager images.
