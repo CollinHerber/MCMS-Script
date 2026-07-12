@@ -339,7 +339,7 @@
             "runtime": "Linux",
             "hardware": "2 CPU cores @ 3.2 GHz, RAM 8G+ (16G recommended for 10 players), SSD 35G+",
             "size": "35GB+",
-            "targetLink": "https://github.com/indifferentbroccoli/windrose-server-docker",
+            "targetLink": "",
             "author": "Indifferent Broccoli",
             "tags": [
                 "Docker version",
