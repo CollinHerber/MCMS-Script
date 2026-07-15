@@ -329,6 +329,41 @@
             }
         },
         {
+            "title": "Windrose Dedicated Server",
+            "language": "en_us",
+            "platform": "Windows",
+            "description": "Native Windows Windrose dedicated server installed through SteamCMD. Requires a Windows MCSManager daemon.",
+            "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3041230/7e838d87d787735d5d29d72777c5ee55653dfb2b/header.jpg",
+            "gameType": "Windrose",
+            "category": "Latest Version",
+            "runtime": "Windows",
+            "hardware": "2 CPU cores @ 3.2 GHz, RAM 8G+ (16G recommended for 10 players), SSD 35G+",
+            "size": "35GB+",
+            "targetLink": "",
+            "author": "MCSManager / Windrose",
+            "tags": [
+                "Native Windows",
+                "SteamCMD"
+            ],
+            "setupInfo": {
+                "startCommand": "R5\\Binaries\\Win64\\WindroseServer-Win64-Shipping.exe -log",
+                "stopCommand": "^C",
+                "updateCommand": "\"{mcsm_steamcmd}\" +force_install_dir \"{mcsm_workspace}\" +login anonymous +app_update 4129620 validate +quit",
+                "ie": "utf8",
+                "oe": "utf8",
+                "type": "steam/windrose",
+                "tag": [
+                    "Windrose"
+                ],
+                "fileCode": "utf8",
+                "processType": "general",
+                "runAs": "",
+                "terminalOption": {
+                    "pty": false
+                }
+            }
+        },
+        {
             "title": "Project Zomboid",
             "title-zh": "僵尸毁灭工程",
             "language": "en_us",
