@@ -478,7 +478,7 @@
             "setupInfo": {
                 "startCommand": "",
                 "stopCommand": "^C",
-                "updateCommand": "/bin/bash -lc \"su-exec sdtdserver /home/sdtdserver/sdtdserver update\"",
+                "updateCommand": "/bin/bash -lc \"START_MODE=2 /home/sdtdserver/user.sh\"",
                 "ie": "utf8",
                 "oe": "utf8",
                 "type": "steam/7dtd",
@@ -497,8 +497,7 @@
                         "{mcsm_port2}:26901/udp",
                         "{mcsm_port3}:26902/udp",
                         "{mcsm_port4}:8080/tcp",
-                        "{mcsm_port5}:8081/tcp",
-                        "{mcsm_port6}:8082/tcp"
+                        "{mcsm_port5}:8081/tcp"
                     ],
                     "changeWorkdir": false,
                     "workingDir": "",
