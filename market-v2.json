@@ -339,7 +339,7 @@
             "runtime": "Linux (AMD64, Wine)",
             "hardware": "4 CPU cores, RAM 8G+, SSD 15G+",
             "size": "15GB+",
-            "remark": "The game and query ports use UDP. RCON is enabled only inside the container for graceful shutdown and is not published.",
+            "remark": "Keeps game binaries in a Docker named volume because V Rising crashes when Unity binaries run from Docker Desktop Windows bind mounts. The game and query ports use UDP. RCON is internal only.",
             "targetLink": "",
             "author": "Didstopia / Stunlock Studios / MCSManager",
             "tags": [
@@ -387,8 +387,10 @@
                         "V_RISING_SERVER_JOB_WORKER_COUNT=8"
                     ],
                     "extraVolumes": [
-                        "{mcsm_workspace}|/app/vrising",
-                        "{mcsm_workspace}/.mcsm-vrising/server|/steamcmd/vrising"
+                        "{mcsm_workspace}|/app/vrising"
+                    ],
+                    "namedVolumes": [
+                        "mcsm-vrising-{mcsm_uuid}|/steamcmd/vrising"
                     ]
                 }
             }
