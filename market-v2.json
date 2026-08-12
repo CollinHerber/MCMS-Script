@@ -329,6 +329,71 @@
             }
         },
         {
+            "title": "V Rising Dedicated Server",
+            "language": "en_us",
+            "platform": "Linux",
+            "description": "Run V Rising Dedicated Server with didstopia/vrising-server, persistent saves and game files, automatic first installation, and friendly JSON configuration editors.",
+            "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1604030/header.jpg",
+            "gameType": "V Rising",
+            "category": "Latest Version",
+            "runtime": "Linux (AMD64, Wine)",
+            "hardware": "4 CPU cores, RAM 8G+, SSD 15G+",
+            "size": "15GB+",
+            "remark": "The game and query ports use UDP. RCON is enabled only inside the container for graceful shutdown and is not published.",
+            "targetLink": "",
+            "author": "Didstopia / Stunlock Studios / MCSManager",
+            "tags": [
+                "Docker version",
+                "Wine",
+                "Auto update",
+                "Friendly configuration"
+            ],
+            "setupInfo": {
+                "startCommand": "",
+                "stopCommand": "^C",
+                "updateCommand": "/bin/bash -lc \"export V_RISING_SERVER_START_MODE=1; exec /entrypoint.sh bash /app/start.sh\"",
+                "ie": "utf8",
+                "oe": "utf8",
+                "type": "steam/vrising",
+                "tag": [
+                    "V Rising"
+                ],
+                "fileCode": "utf8",
+                "processType": "docker",
+                "runAs": "",
+                "docker": {
+                    "image": "didstopia/vrising-server:latest",
+                    "updateCommandImage": "didstopia/vrising-server:latest",
+                    "ports": [
+                        "{mcsm_port1}:9876/udp",
+                        "{mcsm_port2}:9877/udp"
+                    ],
+                    "changeWorkdir": false,
+                    "workingDir": "",
+                    "env": [
+                        "PUID=1000",
+                        "PGID=1000",
+                        "V_RISING_SERVER_PERSISTENT_DATA_PATH=/app/vrising",
+                        "V_RISING_SERVER_BRANCH=public",
+                        "V_RISING_SERVER_START_MODE=2",
+                        "V_RISING_SERVER_UPDATE_MODE=1",
+                        "V_RISING_SERVER_DEFAULT_HOST_SETTINGS=false",
+                        "V_RISING_SERVER_DEFAULT_GAME_SETTINGS=false",
+                        "V_RISING_SERVER_GAME_PORT=9876",
+                        "V_RISING_SERVER_QUERY_PORT=9877",
+                        "V_RISING_SERVER_RCON_ENABLED=true",
+                        "V_RISING_SERVER_RCON_PORT=9878",
+                        "V_RISING_SERVER_RCON_PASSWORD={mcsm_uuid}",
+                        "V_RISING_SERVER_JOB_WORKER_COUNT=8"
+                    ],
+                    "extraVolumes": [
+                        "{mcsm_workspace}|/app/vrising",
+                        "{mcsm_workspace}/.mcsm-vrising/server|/steamcmd/vrising"
+                    ]
+                }
+            }
+        },
+        {
             "title": "Windrose Dedicated Server",
             "language": "en_us",
             "platform": "Windows",
